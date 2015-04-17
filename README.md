@@ -1,5 +1,9 @@
 # London
+<p align="center">
+<img src="https://github.com/gzoppelt/london/app/common/images/neighborhood.png" alt="London Neighborhood">
 Udacity Neighborhood Map Project
+<p>
+
 ### Task
 SPA featuring a neighborhood with
 - highlighted locations
