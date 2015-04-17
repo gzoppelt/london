@@ -3,7 +3,8 @@
 /* exported app */
 
 var app = angular.module('london', [
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap'
 ]);
 
 app.run(['dataService', function (sData) {
@@ -11,51 +12,25 @@ app.run(['dataService', function (sData) {
 }]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+
+    /*  Originally I had planned the application to have many more states, like hover, click.
+     That's why the setup here is so generous. In the course of implementing
+     I found out that all the other states are not needed because AngularJS handles theese things
+     implicitly.
+     */
+
     $stateProvider
         .state('home', {
-            url:            '/',
+            url:        '/',
             views: {
-                'header': {
-                    templateUrl: 'app/header/headerTemplate.html',
-                    controller:  'HeaderController as cHeader'
-                },
-                'navi': {
-                    templateUrl: 'app/navi/naviTemplate.html',
-                    controller:  'NaviController as cNavi'
-                },
-                'map': {
-                    templateUrl: 'app/map/mapTemplate.html',
-                    controller:  'MapController as cMap'
-                }
+               'main': {
+                   templateUrl: 'app/views/main/_mainView.html',
+                   controller:  'MainController as cMain'
+               }
             }
-        })
-
-        .state('hover', {
-            url:            '/hover/:item',
-            views: {
-                'headerHover': {
-                    templateUrl: 'app/header/headerTemplate.html',
-                    controller:  'app/header/HeaderHoverController.js as cHeaderHover'
-                },
-                'naviHover': {
-                    templateUrl: 'app/navi/naviTemplate.html',
-                    controller:  'app/navi/NaviHoverController.js as cNaviHover'
-                },
-                'mapHover': {
-                    templateUrl: 'app/map/mapTemplate.html',
-                    controller:  'app/map/MapHoverController.js as cMapHover'
-                }
-            }
-            //
-        })
-
-        .state('click', {
-            url:            '/click/:item',
-            templateUrl:    'app/slide/slideTemplate.html',
-            controller:     'SlideController.js as cSlide'
-
         })
     ;
+
     $urlRouterProvider
         .otherwise('/')
     ;

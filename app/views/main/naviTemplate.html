@@ -1,0 +1,17 @@
+<!--
+    Navi is a list of London sights, which is created by loading the text mentioned
+    in the list property of each list entry in cMain.list (_MainController.js)
+-->
+<div class="navi">
+    <ul data-ng-repeat="entry in cMain.list">
+        <li
+            id="li{{ entry.index }}"
+            ng-mouseover    = "cMain.hover($index)"
+            ng-click        = "cMain.click($index)"
+            ng-mouseleave   = "cMain.home()"
+            ng-class        = "cMain.hoverId == $index ? 'hover' : 'normal';"
+            >
+                {{ entry.list }}
+        </li>
+    </ul>
+</div>

@@ -1,31 +1,88 @@
-ul {
-    list-style-type: none;
+/* down scaling for different screen sizes to avoid the silhouette to get split */
+@media screen and (min-width: 0px) and (max-width: 740px) {
+
+    .left-column {
+        display: none;
+    }
+
+    .london {
+        max-height: 120px;
+    }
 }
 
-.float {
-    float: left;
+@media screen  and (min-width: 741px) and (max-width: 1200px) {
+
+    .left-column {
+        display: none;
+    }
+
+    .london {
+        max-height: 180px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+
+    .left-column {
+        visibility: visible;
+    }
+}
+
+.article {
+    /* creates some spce between the New York Times articles in the modalView */
+    padding-top: 20px;
 }
 
 .bigletters {
+    /* formats the title without having it centered */
     font-weight: bold;
     font-size: 24px;
 }
 
+.float {
+    /* arranges the picture which form the silhouette next to each other */
+    float: left;
+}
+
+.hover {
+    /* formats the font for navigation (hovered) */
+    color: darkred;
+    font-size: x-large;
+}
+
 .pad20 {
+    /* pads the whole application */
     padding: 20px;
 }
 
+#map {
+    /* defines the size of the map */
+    width: 825px;
+    height: 400px;
+    border: 1px red solid;
+}
+
 .navi {
+    /* formats the font for navigation (not hovered) */
     font-size: large;
     font-weight: bold;
     color: #006dcc;
     line-height: 200%;
 }
-.map {
-    padding-left: 10px;
+
+.normal {
+    /* formats the font for navigation (not hovered) */
+    color: #006dcc;
+    font-size: large;
 }
-#map {
-    width: 800px;
-    height: 400px;
-    border: 1px red solid;
+
+.picture {
+    /* formats the street view pictures in the modalView */
+    max-width: 250px;
+    max-height: 250px;
+}
+
+ul {
+    /* removes the bullet points from the navigation list */
+    list-style-type: none;
 }

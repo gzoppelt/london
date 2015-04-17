@@ -2,50 +2,30 @@
 <html ng-app="london">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>London</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="app/common/css/london.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row pad20">
-            <div class="col-md-3 text-center bigletters">
-                London
-                <img src="app/common/images/arms.png" alt="coat of arms">
-                Neighborhood Map
-            </div>
-            <div class="col-md-9">
-                <div ui-view="header">
-                   header
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 text-center" ui-view="navi">
-            </div>
-            <div class="col-md-9" ui-view="map">
-            </div>
-        </div>
-    </div>
-    <!--
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1XRl66j1Nqz4uHYiQKzg-AElVwQJ_EU"></script>
-    -->
+    <!--the actual html, as described in app.js, starts with /app/views/main/_mainView.html-->
+    <div class="container" ui-view="main"></div>
+
+    <!--external components-->
     <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
+    <!--own components-->
     <script src="app/app.js"></script>
     <script src="app/common/services/dataService.js"></script>
-    <script src="app/header/HeaderController.js"></script>
-    <script src="app/header/HeaderHoverController.js"></script>
-    <script src="app/navi/NaviController.js"></script>
-    <script src="app/navi/NaviHoverController.js"></script>
-    <script src="app/map/MapController.js"></script>
-    <script src="app/map/MapHoverController.js"></script>
-    <script src="app/slide/SlideController.js"></script>
+    <script src="app/views/main/_MainController.js"></script>
+    <script src="app/views/modal/ModalController.js"></script>
+
 </body>
 </html>

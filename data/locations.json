@@ -1,5 +1,6 @@
 [
   {
+    "index": 0,
     "name": "ben",
     "list": "Big Ben",
     "picture_black":  [
@@ -10,6 +11,7 @@
     ]
   },
   {
+    "index": 1,
     "name": "underground",
     "list": "London Underground",
     "picture_black": [
@@ -20,8 +22,9 @@
     ]
   },
   {
+    "index": 2,
     "name": "shard",
-    "list": "Shard",
+    "list": "The Shard, London, UK",
     "picture_black":  [
       "app/common/images/part_03_shard_b.png"
     ],
@@ -30,8 +33,9 @@
     ]
   },
   {
+    "index": 3,
     "name": "gherkin",
-    "list": "Gherkin",
+    "list": "The Gherkin",
     "picture_black":  [
       "app/common/images/part_04_gherkin_b.png"
     ],
@@ -40,8 +44,9 @@
     ]
   },
   {
+    "index": 4,
     "name": "paul",
-    "list": "St Paul's Cathedral",
+    "list": "St. Paul's Cathedral",
     "picture_black":  [
       "app/common/images/part_05_paul_b.png"
     ],
@@ -50,8 +55,9 @@
     ]
   },
   {
+    "index": 5,
     "name": "nelson",
-    "list": "Nelson's Column",
+    "list": "Trafalgar Square",
     "picture_black":  [
       "app/common/images/part_06_nelson_b.png"
     ],
@@ -60,6 +66,7 @@
     ]
   },
   {
+    "index": 6,
     "name": "eye",
     "list": "London Eye",
     "picture_black": [
@@ -74,6 +81,7 @@
 
   },
   {
+    "index": 7,
     "name": "tower",
     "list": "Tower of London",
     "picture_black":  [

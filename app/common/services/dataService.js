@@ -84,5 +84,27 @@ app.factory('dataService', function($q, $http){
         });
     };
 
+    sData.getNyt = function(place) {
+        var nytKey = 'b0325fd85e5b5e145c0e83c3dd74aee2:7:71492683';
+        var nytUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?' +
+            'q=' + place + '&api-key=' + nytKey;
+        return $q(function (resolve, reject) {
+           $http
+               .get(nytUrl)
+               .then(
+                   function (result) {
+                       //I reduce the number of articles from 10 to 5 just for nicer looks
+                       if (result) {
+                           sData.nytArticles = result.data.response.docs.splice(0,5);
+                           resolve(sData.nytArticles);
+                       } else {
+                           reject('NYT - No articles found matchin criteria '+ place);
+                       }
+                   }
+               )
+           ;
+        });
+    };
+
     return sData;
 });

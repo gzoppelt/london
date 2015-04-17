@@ -1,0 +1,30 @@
+<!--
+    Modal view to show the results of the query for New York Times articles
+-->
+<div class="pad20">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <img class="picture" ng-src="{{cModal.streetViewUrl}}" alt="{{cModal.item}}">
+            </div>
+            <div class="col-lg-6">
+                <h1>{{cModal.item}}</h1>
+                <img src="app/common/images/nyt.jpg" alt="New York Times Logo">
+                <p class="bigletters">Articles found for {{cModal.item}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div id="nyt" ng-repeat="nyt in cModal.nytArticles">
+                    <li class="article">
+                        <a href="{{nyt.web_url}}">{{nyt.headline.main}}</a>
+                        <p>{{nyt.snippet}}</p>
+                    </li>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-info" ng-click="cModal.ok()">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

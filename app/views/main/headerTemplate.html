@@ -1,0 +1,17 @@
+<!--
+    Header is the London silhuoette, which is created by loading the pictures mentioned
+    in the picture_black property of each list entry in cMain.list (_MainController.js)
+-->
+<div
+    ng-repeat="entry in cMain.list"
+    class="float">
+
+    <img
+        class="london"
+        id="img{{ entry.index }}"
+        ng-src="{{ entry.picture_black[0] }}"
+        alt="{{ entry.list }}"
+        ng-mouseover    = "cMain.hover($index)"
+        ng-click        = "cMain.click($index)"
+        ng-mouseleave   = "cMain.home()">
+</div>

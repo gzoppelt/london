@@ -1,0 +1,43 @@
+<div class="row pad20">
+
+    <!-- home image -->
+    <div class="left-column">
+        <div class="col-md-3 text-center bigletters">
+            London
+            <img src="app/common/images/arms.png" alt="coat of arms">
+            Neighborhood Map
+        </div>
+    </div>
+
+    <!-- header silhouette -->
+    <div class="col-md-9 header">
+        <ng-include src="'app/views/main/headerTemplate.html'"></ng-include>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- left navigation -->
+    <div class="left-column">
+        <div class="col-md-3 text-center">
+            <ng-include src="'app/views/main/naviTemplate.html'"></ng-include>
+        </div>
+    </div>
+
+    <!-- map -->
+    <div class="col-md-9">
+        <div id="map" class="map"></div>
+    </div>
+
+</div>
+
+<div class="row text-center pad20">
+    <p>
+        If you <strong>hover</strong> over either the <b>Navigation list</b> or the <b>London silhouette</b>
+        or any <b>map marker</b> information about the name and shape of the sight will be highlighted.
+        <br>
+        If you <strong>click</strong> on any of them you will get more information: A Street View picture
+        and related articles of the New York Times will be shown on a modal page.
+    </p>
+</div>
