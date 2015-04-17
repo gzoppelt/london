@@ -1,6 +1,6 @@
 # London
 <p align="center">
-<img src="https://github.com/gzoppelt/london/app/common/images/neighborhood.png" alt="London Neighborhood">
+<img src="https://github.com/gzoppelt/london/blob/master/app/common/images/neighborhood.png" alt="London Neighborhood">
 Udacity Neighborhood Map Project
 <p>
 
